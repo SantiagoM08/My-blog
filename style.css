@@ -1,0 +1,89 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f0f4ff, #ffffff);
+    color: #333;
+}
+header {
+    background: linear-gradient(90deg, #0066ff, #00ccff);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+.intro {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+.post {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+.post:hover {
+    transform: translateY(-5px);
+}
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.post h3 {
+    margin: 1rem;
+    color: #0066cc;
+}
+.post p {
+    margin: 0 1rem 1rem;
+}
+.contact {
+    background: #e6f3ff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.contact a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0066ff;
+    color: white;
+}
+.entrada {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: justify;
+}
+.entrada img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}

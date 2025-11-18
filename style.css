@@ -87,3 +87,119 @@ footer {
     border-radius: 10px;
     margin-bottom: 1rem;
 }
+/* Estilos para que el laboratorio se integre con el tema 'style.css' */
+body {
+    /* Se aplica un fondo similar si el original no carga */
+    background: linear-gradient(180deg, #f0f4ff, #ffffff);
+}
+
+.lab-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.lab-section {
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #e6f3ff;
+    padding-bottom: 1.5rem;
+}
+.lab-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.lab-section h2 {
+    color: #0066cc;
+    border-bottom: 2px solid #00ccff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para botones */
+.lab-button {
+    background: linear-gradient(90deg, #0066ff, #00ccff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 5px;
+}
+.lab-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
+}
+
+/* Área de resultados para JS */
+#js-results {
+    width: 100%;
+    height: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el width */
+}
+
+/* Estilos para la sección AJAX */
+.ajax-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .ajax-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.ajax-control, .ajax-output-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ajax-output-box label, .ajax-control label {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.ajax-control input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* 'pre' para mostrar resultados AJAX */
+pre.ajax-output {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    min-height: 50px;
+    white-space: pre-wrap; /* Mantiene formato y ajusta línea */
+    word-wrap: break-word; /* Evita desbordamiento horizontal */
+    margin: 0;
+}
+
+/* Contenido del recurso con más altura */
+#contenido-recurso {
+    min-height: 200px;
+}

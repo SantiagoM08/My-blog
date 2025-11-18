@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio JS y AJAX - El Rincón de Santiago</title>
+    <!-- Se enlaza el CSS existente del blog, que ya contiene los estilos del laboratorio -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales para asegurar que el header del lab sea coherente */
+        header nav a.active {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header coherente con el blog (tomado de index.html) -->
+    <header>
+        <h1>El Rincón de Santiago</h1>
+        <p>Explorando lo último en tecnología y cultura digital</p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <!-- Marcamos 'Laboratorio' como activo en esta página -->
+            <a href="laboratorio.html" class="active">Laboratorio</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal para los ejercicios -->
+    <main class="lab-container">
+
+        <!-- Sección de Ejercicios JavaScript -->
+        <section class="lab-section">
+            <h2>Ejercicios Básicos de JavaScript</h2>
+            <p>Presiona los botones para ejecutar las funciones de `laboratorio.js`.</p>
+            
+            <div class="js-controls">
+                <button class="lab-button" onclick="ejercicio1()">1. Verificar Palíndromo</button>
+                <button class="lab-button" onclick="ejercicio2()">2. Comparar Números</button>
+                <button class="lab-button" onclick="ejercicio3()">3. Listar Vocales</button>
+                <button class="lab-button" onclick="ejercicio4()">4. Contar Vocales</button>
+            </div>
+            
+            <label for="js-results">Resultados (los `prompt` aparecerán primero):</label>
+            <!-- El 'textarea' que espera 'laboratorio.js' para mostrar resultados -->
+            <textarea id="js-results" readonly rows="6" placeholder="Los resultados de los ejercicios JS aparecerán aquí..."></textarea>
+        </section>
+
+        <!-- Sección de Ejercicios AJAX -->
+        <section class="lab-section">
+            <h2>Ejercicios de AJAX (XMLHttpRequest)</h2>
+            <p>Usa esta sección para solicitar el contenido de los recursos locales (ej. `post1.html`, `post2.html`) y ver la respuesta.</p>
+            
+            <div class="ajax-grid">
+                
+                <!-- Columna de Controles y Estado -->
+                <div class="ajax-control-group">
+                    
+                    <div class="ajax-control">
+                        <label for="recurso-url">URL del Recurso:</label>
+                        <!-- El 'input' que espera 'laboratorio.js' -->
+                        <input type="text" id="recurso-url" placeholder="Introduce la URL (ej. post1.html)">
+                    </div>
+
+                    <!-- El 'button' que espera 'laboratorio.js' -->
+                    <button class="lab-button" id="btn-mostrar-contenido">Mostrar Contenidos</button>
+
+                    <div class="ajax-output-box">
+                        <label>Estado de la Petición (ReadyState):</label>
+                        <!-- El elemento para el estado que espera 'laboratorio.js' -->
+                        <pre id="estado-peticion" class="ajax-output">(no iniciada)</pre>
+                    </div>
+
+                    <div class="ajax-output-box">
+                        <label>Código de Estado (HTTP):</label>
+                        <!-- El elemento para el código de estado que espera 'laboratorio.js' -->
+                        <pre id="codigo-estado" class="ajax-output">(esperando)</pre>
+                    </div>
+                </div>
+
+                <!-- Columna de Contenidos y Cabeceras -->
+                <div class="ajax-output-group">
+                    <div class="ajax-output-box">
+                        <label>Cabeceras de la Respuesta:</label>
+                        <!-- El 'pre' para las cabeceras que espera 'laboratorio.js' -->
+                        <pre id="cabeceras-recurso" class="ajax-output">(esperando)</pre>
+                    </div>
+
+                    <div class="ajax-output-box">
+                        <label>Contenido del Recurso (ResponseText):</label>
+                        <!-- El 'pre' para el contenido que espera 'laboratorio.js' -->
+                        <pre id="contenido-recurso" class="ajax-output">(esperando)</pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer coherente con el blog -->
+    <footer>
+        <p>© 2025 El Rincón de Santiago - Creado con HTML y CSS</p>
+    </footer>
+
+    <!-- Se enlaza el JS existente que contiene toda la lógica -->
+    <!-- 'defer' asegura que el script se ejecute después de que el HTML esté cargado -->
+    <script src="laboratorio.js" defer></script>
+</body>
+</html>

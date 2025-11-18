@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio JS y AJAX - El Rincón de Santiago</title>
-    <!-- Se enlaza el CSS existente del blog, que ya contiene los estilos del laboratorio -->
+    
+    <!-- PASO 1: Se elimina el enlace a 'laboratorio.css' que era redundante -->
+    <!-- <link rel="stylesheet" href="laboratorio.css"> -->
+    
+    <!-- PASO 2: Dejamos ÚNICAMENTE el 'style.css' principal, que ya contiene 
+         todos los estilos (los del blog y los del laboratorio) -->
     <link rel="stylesheet" href="style.css">
+    
     <style>
         /* Estilos adicionales para asegurar que el header del lab sea coherente */
         header nav a.active {
@@ -33,7 +39,6 @@
         <!-- Sección de Ejercicios JavaScript -->
         <section class="lab-section">
             <h2>Ejercicios Básicos de JavaScript</h2>
-            <p>Presiona los botones para ejecutar las funciones de `laboratorio.js`.</p>
             
             <div class="js-controls">
                 <button class="lab-button" onclick="ejercicio1()">1. Verificar Palíndromo</button>

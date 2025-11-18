@@ -87,12 +87,6 @@ footer {
     border-radius: 10px;
     margin-bottom: 1rem;
 }
-/* Estilos para que el laboratorio se integre con el tema 'style.css' */
-body {
-    /* Se aplica un fondo similar si el original no carga */
-    background: linear-gradient(180deg, #f0f4ff, #ffffff);
-}
-
 .lab-container {
     max-width: 900px;
     margin: 2rem auto;
